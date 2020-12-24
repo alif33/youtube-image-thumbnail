@@ -3,11 +3,11 @@ const fs = require('fs');
 const cors = require('cors')
 const fetch = require('node-fetch');
 const fb  = require('firebase')
-const cors = require('cors')
+// const cors = require('cors')
 const app  = express()
 
 
-app.use(cors())
+// app.use(cors())
 app.use(express.static('public'))
 
 app.get('/', (req, res)=>{

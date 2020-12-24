@@ -10,26 +10,20 @@ const app  = express()
 app.use(express.static('public'))
 
 app.get('/', (req, res)=>{
-
-
   res.json({
     messase: 'Hiiiiiiiiiiiiiiiiiiiii!'
   })
-    // const url = "https://img.youtube.com/vi/nB-9WsIPe3Y/sddefault.jpg"
-    // async function download() {
-    //     const response = await fetch(url);
-    //     const buffer = await response.buffer();
-    //     fs.writeFile(`./public/img/hello.jpg`, buffer, () =>{
-    //       // console.log(fb)
-    //     } 
-    //   );
-    //   }          
-    //   download() 
-    //  res.sendFile(`./public/img/image.jpg`, { root: __dirname })   
-    //  fs.unlink(`${__dirname}/.public/img/image.jpg`, ()=>{
-    //    console.log('Everything okay!!')
-    //  })
 })
+
+app.get('/image', (req, res)=>{
+  res.json({
+    messase: 'I am an Image!'
+  })
+})
+
+
+
+
 app.post('/image', (req, res)=>{
 
     const url = "https://img.youtube.com/vi/nB-9WsIPe3Y/sddefault.jpg"
